@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Louvolite - Company Information</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+            overflow: hidden;
+        }
+
+        header {
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.1em;
+            opacity: 0.9;
+        }
+
+        .content {
+            padding: 40px;
+        }
+
+        .company-details {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            border-left: 4px solid #667eea;
+        }
+
+        .company-details p {
+            margin: 8px 0;
+        }
+
+        .company-details strong {
+            color: #2c3e50;
+        }
+
+        section {
+            margin-bottom: 40px;
+        }
+
+        h2 {
+            color: #2c3e50;
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #667eea;
+        }
+
+        h3 {
+            color: #34495e;
+            font-size: 1.3em;
+            margin: 20px 0 15px 0;
+        }
+
+        .leadership-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .person-card {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #667eea;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .person-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+
+        .person-card h4 {
+            color: #2c3e50;
+            font-size: 1.2em;
+            margin-bottom: 8px;
+        }
+
+        .person-card .role {
+            color: #667eea;
+            font-weight: 600;
+            margin-bottom: 10px;
+            font-size: 1em;
+        }
+
+        .person-card .details {
+            font-size: 0.9em;
+            color: #555;
+            line-height: 1.8;
+        }
+
+        .team-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 15px;
+        }
+
+        .team-member {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 6px;
+            border-left: 3px solid #764ba2;
+        }
+
+        .team-member strong {
+            color: #2c3e50;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .team-member span {
+            color: #666;
+            font-size: 0.95em;
+        }
+
+        .resignation-list {
+            background: #fff3cd;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #ffc107;
+        }
+
+        .resignation-list ul {
+            list-style-position: inside;
+            margin-left: 10px;
+        }
+
+        .resignation-list li {
+            margin: 10px 0;
+            color: #856404;
+        }
+
+        .secretary-info {
+            background: #e8f4f8;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #17a2b8;
+        }
+
+        .note {
+            background: #fff9e6;
+            padding: 15px;
+            border-radius: 6px;
+            margin-top: 20px;
+            border-left: 4px solid #ffc107;
+            font-size: 0.95em;
+        }
+
+        footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 0.9em;
+        }
+
+        @media (max-width: 768px) {
+            .content {
+                padding: 20px;
+            }
+
+            header h1 {
+                font-size: 1.8em;
+            }
+
+            .leadership-grid,
+            .team-list {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Louvolite</h1>
+            <p>Louver-Lite Limited</p>
+        </header>
+
+        <div class="content">
+            <div class="company-details">
+                <p><strong>Company:</strong> Louver-Lite Limited</p>
+                <p><strong>Industry:</strong> Window Blinds and Shading Systems Manufacturer</p>
+                <p><strong>Location:</strong> Ashton Road, Hyde, Cheshire, SK14 4BG, United Kingdom</p>
+                <p><strong>Region:</strong> Hyde, Greater Manchester, UK</p>
+                <p><strong>Company Number:</strong> 01011431</p>
+                <p><strong>Employees:</strong> 201-500</p>
+            </div>
+
+            <section>
+                <h2>Board of Directors / Senior Leadership Team</h2>
+                <div class="leadership-grid">
+                    <div class="person-card">
+                        <h4>Simon Jon Monk</h4>
+                        <div class="role">Chairman and Finance Director</div>
+                        <div class="details">
+                            <p>Nationality: British<br>
+                            Born: July 1966<br>
+                            Resident: England<br>
+                            Appointed: April 29, 2004</p>
+                        </div>
+                    </div>
+
+                    <div class="person-card">
+                        <h4>Gavin James Gray</h4>
+                        <div class="role">Chief Executive Officer</div>
+                        <div class="details">
+                            <p>Nationality: British<br>
+                            Born: May 1980<br>
+                            Resident: Scotland<br>
+                            Appointed: January 4, 2021</p>
+                        </div>
+                    </div>
+
+                    <div class="person-card">
+                        <h4>Richard Michael Ingham</h4>
+                        <div class="role">Sales Director</div>
+                        <div class="details">
+                            <p>Nationality: British<br>
+                            Born: June 1975<br>
+                            Resident: England<br>
+                            Appointed: January 3, 2023</p>
+                        </div>
+                    </div>
+
+                    <div class="person-card">
+                        <h4>Paula Young</h4>
+                        <div class="role">Operations Director</div>
+                        <div class="details">
+                            <p>Nationality: British<br>
+                            Born: April 1970<br>
+                            Resident: England<br>
+                            Appointed: June 1, 2024</p>
+                        </div>
+                    </div>
+
+                    <div class="person-card">
+                        <h4>Andrew Jon Greening</h4>
+                        <div class="role">Engineering Director</div>
+                        <div class="details">
+                            <p>Nationality: British<br>
+                            Born: September 1975<br>
+                            Resident: England<br>
+                            Appointed: June 1, 2025</p>
+                        </div>
+                    </div>
+
+                    <div class="person-card">
+                        <h4>Dean Rhodes</h4>
+                        <div class="role">Production Director</div>
+                        <div class="details">
+                            <p>Nationality: British<br>
+                            Born: November 1968<br>
+                            Resident: England<br>
+                            Appointed: June 1, 2021</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h2>Company Secretary</h2>
+                <div class="secretary-info">
+                    <h4>Kelly-Lee Whitehead</h4>
+                    <p><strong>Appointed:</strong> September 10, 2021</p>
+                    <p><strong>Total Appointments:</strong> 1</p>
+                    <p><strong>Correspondence Address:</strong> Louver-Lite Limited, Ashton Road, Hyde, Cheshire, England, SK14 4BG</p>
+                    
+                    <div class="note" style="margin-top: 15px;">
+                        <strong>Additional Notes:</strong>
+                        <ul style="margin-top: 10px; margin-left: 20px;">
+                            <li>Not featured in the company's "Meet the Team" section, suggesting a more administrative or behind-the-scenes role</li>
+                            <li>Has demonstrated product knowledge through public recommendations of Louvolite products (e.g., "perfect fit" blinds and cellular fabrics)</li>
+                            <li>Limited public profile information available</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h2>Extended Team Members</h2>
+                <p style="margin-bottom: 20px;">Featured in the company's "Meet the Team" section (as of January 2026):</p>
+                <div class="team-list">
+                    <div class="team-member">
+                        <strong>Jo Burns</strong>
+                        <span>Senior Creative Designer</span>
+                    </div>
+                    <div class="team-member">
+                        <strong>Nicola Sidebotham</strong>
+                        <span>Customer Service & Export Manager</span>
+                    </div>
+                    <div class="team-member">
+                        <strong>Lucie Taylor</strong>
+                        <span>Finished Goods Manager</span>
+                    </div>
+                    <div class="team-member">
+                        <strong>Mike Carr</strong>
+                        <span>Design Manager</span>
+                    </div>
+                    <div class="team-member">
+                        <strong>Mat Cotterill</strong>
+                        <span>UK National Sales Manager</span>
+                    </div>
+                    <div class="team-member">
+                        <strong>Lee Winterbottom</strong>
+                        <span>Toolroom Manager</span>
+                    </div>
+                    <div class="team-member">
+                        <strong>Scarlet Hadfield</strong>
+                        <span>Apprentice Tool Maker</span>
+                    </div>
+                    <div class="team-member">
+                        <strong>Analicia Gaudio</strong>
+                        <span>Business Analyst</span>
+                    </div>
+                    <div class="team-member">
+                        <strong>Lukasz Nowakowski</strong>
+                        <span>Laboratory Manager</span>
+                    </div>
+                    <div class="team-member">
+                        <strong>Barry Broad</strong>
+                        <span>Production Supervisor</span>
+                    </div>
+                    <div class="team-member">
+                        <strong>Paula Young</strong>
+                        <span>Operations Director</span>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h2>Information Technology Department</h2>
+                <p>No individuals are explicitly listed in public sources as part of a dedicated Information Technology (IT) department. However:</p>
+                <div style="background: #f8f9fa; padding: 20px; border-radius: 8px; margin-top: 15px;">
+                    <p><strong>Analicia Gaudio</strong> (Business Analyst / Project Manager) may have responsibilities that overlap with IT, such as analyzing business systems, processes, or technology implementations, which are common in IT-related roles.</p>
+                    <p style="margin-top: 10px;">The company has 201-500 employees overall, so an IT team likely exists, but no specific members or roles are publicly detailed.</p>
+                </div>
+            </section>
+
+            <section>
+                <h2>Recent Changes/Resignations</h2>
+                <div class="resignation-list">
+                    <p><strong>From Companies House Records:</strong></p>
+                    <ul>
+                        <li><strong>Antony Barnes</strong> (former Director) - Resigned: March 26, 2025 (appointed April 1, 2003)</li>
+                        <li><strong>Matthew John Waddington</strong> (former Director) - Resigned: December 31, 2022 (appointed June 1, 2021)</li>
+                        <li><strong>David Peter Robinson</strong> (former Director) - Resigned: June 2, 2023 (appointed February 28, 1997)</li>
+                    </ul>
+                </div>
+            </section>
+
+            <div class="note">
+                <strong>Note:</strong> Leadership roles can evolve, and Companies House provides the most authoritative list of directors. The "Meet the Team" section on the company website is not an exhaustive list of all employees but highlights key individuals showcased publicly as of January 2026. For the most up-to-date official information on directors, refer to Companies House filings. For team updates or potential IT roles, check the company's website or careers page directly.
+            </div>
+        </div>
+
+        <footer>
+            <p>&copy; 2026 Louvolite Company Information | Data as of January 2026</p>
+            <p>Information compiled from Companies House records and public sources</p>
+        </footer>
+    </div>
+</body>
+</html>
