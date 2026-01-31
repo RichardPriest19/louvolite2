@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" style="scroll-behavior: smooth;">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -187,6 +187,89 @@
             font-size: 0.9em;
         }
 
+        /* Table of Contents Styles */
+        .table-of-contents {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            padding: 30px;
+            border-radius: 8px;
+            margin-bottom: 40px;
+            border-left: 5px solid #667eea;
+        }
+
+        .table-of-contents h2 {
+            margin-top: 0;
+            margin-bottom: 20px;
+            font-size: 1.6em;
+            color: #2c3e50;
+            border-bottom: 2px solid #667eea;
+            padding-bottom: 10px;
+        }
+
+        .toc-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .toc-list li {
+            margin: 12px 0;
+        }
+
+        .toc-list a {
+            color: #2c3e50;
+            text-decoration: none;
+            font-size: 1.05em;
+            display: flex;
+            align-items: center;
+            padding: 10px 15px;
+            border-radius: 6px;
+            transition: all 0.3s ease;
+            background: white;
+        }
+
+        .toc-list a:hover {
+            background: #667eea;
+            color: white;
+            transform: translateX(10px);
+            box-shadow: 0 3px 10px rgba(102, 126, 234, 0.3);
+        }
+
+        .toc-list a::before {
+            content: "▸";
+            margin-right: 10px;
+            font-weight: bold;
+        }
+
+        /* Go to Top Button Styles */
+        .go-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+            transition: all 0.3s ease;
+            z-index: 1000;
+        }
+
+        .go-to-top:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+        }
+
+        .go-to-top.show {
+            display: flex;
+        }
+
         @media (max-width: 768px) {
             .content {
                 padding: 20px;
@@ -200,12 +283,20 @@
             .team-list {
                 grid-template-columns: 1fr;
             }
+
+            .go-to-top {
+                bottom: 20px;
+                right: 20px;
+                width: 45px;
+                height: 45px;
+                font-size: 20px;
+            }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <header>
+        <header id="top">
             <h1>Louvolite</h1>
             <p>Louver-Lite Limited</p>
         </header>
@@ -220,7 +311,258 @@
                 <p><strong>Employees:</strong> 201-500</p>
             </div>
 
-            <section>
+            <div class="table-of-contents">
+                <h2>📑 Table of Contents</h2>
+                <ul class="toc-list">
+                    <li><a href="#products">Products & Services</a></li>
+                    <li><a href="#customers">Customers & Market</a></li>
+                    <li><a href="#offices">Office Locations & Facilities</a></li>
+                    <li><a href="#leadership">Board of Directors / Senior Leadership Team</a></li>
+                    <li><a href="#secretary">Company Secretary</a></li>
+                    <li><a href="#team">Extended Team Members</a></li>
+                    <li><a href="#it">Information Technology Department</a></li>
+                    <li><a href="#resignations">Recent Changes/Resignations</a></li>
+                </ul>
+            </div>
+
+            <section id="products">
+                <h2>Products & Services</h2>
+                <p style="margin-bottom: 20px;">Louvolite is recognized as a leading supplier of innovative and high-quality window shading products, all designed and manufactured in the United Kingdom. The company offers a comprehensive range of window blind systems and fabrics for both domestic and commercial markets.</p>
+                
+                <h3>Product Lines</h3>
+                <div class="team-list" style="margin-bottom: 25px;">
+                    <div class="team-member">
+                        <strong>Roller Blinds</strong>
+                        <span>Multiple systems (System 32®, 40®, 40+®, 45®, 45+®, 55®) with various control options including manual chain, soft rise spring return, and motorized</span>
+                    </div>
+                    <div class="team-member">
+                        <strong>Vertical Blinds</strong>
+                        <span>Innovative louvre systems with 180-degree rotation for light control and privacy</span>
+                    </div>
+                    <div class="team-member">
+                        <strong>Vision® Blinds</strong>
+                        <span>Contemporary two-layer design combining privacy and light control with translucent and opaque striped fabric</span>
+                    </div>
+                    <div class="team-member">
+                        <strong>Allusion® Blinds</strong>
+                        <span>Unique window dressing introduced in 2018</span>
+                    </div>
+                    <div class="team-member">
+                        <strong>Cellular & Pleated Blinds</strong>
+                        <span>Energy-efficient honeycomb structures and pleated designs</span>
+                    </div>
+                    <div class="team-member">
+                        <strong>Panel Blinds</strong>
+                        <span>Large window and room divider solutions</span>
+                    </div>
+                    <div class="team-member">
+                        <strong>Perfect Fit® Blinds</strong>
+                        <span>Innovative no-drill fitting system that moves with windows and doors</span>
+                    </div>
+                    <div class="team-member">
+                        <strong>Venetian Blinds</strong>
+                        <span>Classic horizontal slat blinds</span>
+                    </div>
+                    <div class="team-member">
+                        <strong>Urban Shutters</strong>
+                        <span>Polysilk vinyl shutters in cafe, full height, and tier-on-tier styles</span>
+                    </div>
+                    <div class="team-member">
+                        <strong>Perfect Fit Shutters Lite</strong>
+                        <span>Award-winning product (Best New Product 2023 BBSA Awards)</span>
+                    </div>
+                    <div class="team-member">
+                        <strong>Conservatory Blinds</strong>
+                        <span>Specialized solutions for conservatories</span>
+                    </div>
+                    <div class="team-member">
+                        <strong>Precision Roller Blinds</strong>
+                        <span>High-precision roller blind systems</span>
+                    </div>
+                    <div class="team-member">
+                        <strong>RomaShade®</strong>
+                        <span>Proprietary roman blind systems</span>
+                    </div>
+                </div>
+
+                <h3>Special Features & Technologies</h3>
+                <div style="background: #f8f9fa; padding: 20px; border-radius: 8px; margin-top: 15px;">
+                    <p><strong>Louvolite One Touch® Motorization</strong></p>
+                    <ul style="margin: 15px 0 15px 30px; line-height: 1.8;">
+                        <li><strong>Magic Wand</strong> - Battery powered, operates blinds up to 2.4kg</li>
+                        <li><strong>1100 Series</strong> - Lithium rechargeable, controls up to 42 blinds (max 3kg)</li>
+                        <li><strong>1500 & 6000 Series</strong> - AC mains powered for large windows (up to 4m wide, 6m drops)</li>
+                        <li><strong>Smart Home Integration</strong> - Compatible with Amazon Alexa, Google Assistant, Control 4</li>
+                        <li><strong>Matter & Thread</strong> - Latest smart home protocol support</li>
+                        <li><strong>App Control</strong> - Operate blinds from anywhere via Louvolite Home hub and app</li>
+                    </ul>
+
+                    <p style="margin-top: 20px;"><strong>Specialized Fabric Treatments & Coatings</strong></p>
+                    <ul style="margin: 15px 0 15px 30px; line-height: 1.8;">
+                        <li><strong>SPC (Solar Protection Coating)</strong> - Anti-glare technology, reflects heat and light for energy efficiency</li>
+                        <li><strong>CCT (Cool Colour Technology)</strong> - Darker fabrics that reflect more light to reduce heat</li>
+                        <li><strong>Ultra-Fresh</strong> - Protection from microbial attack, keeps fabrics fresher and cleaner</li>
+                        <li><strong>Pollergen</strong> - Helps prevent hayfever symptoms</li>
+                        <li><strong>CoronaSafe™</strong> - Treatment for Carnival fabrics to help eliminate viruses from fabric surface</li>
+                        <li><strong>Moisture Resistant</strong> - Suitable for bathrooms and kitchens</li>
+                        <li><strong>Flame Retardant</strong> - High-performance FR fabrics for commercial applications</li>
+                        <li><strong>Halogen Free FR</strong> - Eco-friendly flame retardant options</li>
+                    </ul>
+
+                    <p style="margin-top: 20px;"><strong>Design Capabilities</strong></p>
+                    <ul style="margin: 15px 0 15px 30px; line-height: 1.8;">
+                        <li>On-site digital printing facility for bespoke designs</li>
+                        <li>In-house design team</li>
+                        <li>Over 100 unique prints in collection</li>
+                        <li>Licensed Disney, Star Wars™, and Marvel designs</li>
+                        <li>Recycled polyester fabrics (Carnival range)</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section id="customers">
+                <h2>Customers & Market</h2>
+                <div style="background: #f8f9fa; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
+                    <h3 style="margin-top: 0;">Business Model</h3>
+                    <p><strong>B2B Wholesale Only</strong> - Louvolite is a wholesaler and sells exclusively to the trade. They do not sell directly to consumers.</p>
+                    
+                    <h3>Customer Types</h3>
+                    <ul style="margin: 15px 0 15px 30px; line-height: 1.8;">
+                        <li><strong>Blind Retailers & Fabricators</strong> - Accredited stockists and dealers who sell to end consumers</li>
+                        <li><strong>Commercial Contractors</strong> - For office buildings, schools, healthcare facilities</li>
+                        <li><strong>Hospitality Sector</strong> - Hotels, restaurants, and entertainment venues</li>
+                        <li><strong>Residential Sector</strong> - Through retail partners for home installations</li>
+                        <li><strong>Architects & Specifiers</strong> - For commercial and large-scale projects</li>
+                    </ul>
+
+                    <h3>Market Reach</h3>
+                    <p><strong>Global Distribution</strong> - Louvolite supplies over 100 countries worldwide through their international network.</p>
+                    
+                    <div style="margin-top: 20px;">
+                        <p><strong>Key Markets:</strong></p>
+                        <ul style="margin: 10px 0 10px 30px; line-height: 1.8;">
+                            <li>United Kingdom (domestic market)</li>
+                            <li>North America (Canada, USA)</li>
+                            <li>Australia & New Zealand</li>
+                            <li>Europe</li>
+                            <li>Middle East</li>
+                            <li>South Africa</li>
+                            <li>South East Asia</li>
+                        </ul>
+                    </div>
+
+                    <h3>Export History</h3>
+                    <p style="margin-top: 15px;">Louvolite began exploring export markets in 1973, initially supplying customers in Australia, New Zealand, South Africa, and the Middle East. Since 1975, the company has regularly exhibited at international trade fairs and leading exhibitions, creating inroads to markets across Europe and Asia.</p>
+                </div>
+
+                <div style="background: #e8f4f8; padding: 20px; border-radius: 8px; border-left: 4px solid #17a2b8;">
+                    <h3 style="margin-top: 0;">Find a Stockist</h3>
+                    <p>End consumers can locate their nearest accredited Louvolite supplier through the company's stockist locator on their website. Louvolite provides training and support to their stockists to ensure customers receive reliable, safe-by-design products.</p>
+                </div>
+            </section>
+
+            <section id="offices">
+                <h2>Office Locations & Facilities</h2>
+                
+                <h3>Head Office & UK Manufacturing</h3>
+                <div class="person-card" style="margin-bottom: 25px;">
+                    <h4>🇬🇧 United Kingdom (Headquarters)</h4>
+                    <div class="details">
+                        <p><strong>Address:</strong> Louvolite, Ashton Road, Hyde, Cheshire, SK14 4BG, United Kingdom<br>
+                        <strong>Location:</strong> Hyde, Greater Manchester<br>
+                        <strong>Phone:</strong> +44 (0)161 882 5000 / +44 (0)161 882 5050<br>
+                        <strong>Email:</strong> orders@louvolite.com<br>
+                        <strong>Website:</strong> www.louvolite.com</p>
+                        
+                        <p style="margin-top: 15px;"><strong>Facilities:</strong></p>
+                        <ul style="margin-left: 20px; margin-top: 8px;">
+                            <li>Main headquarters and administration</li>
+                            <li>Manufacturing facility - all products are UK manufactured</li>
+                            <li>Customer service and cut length department</li>
+                            <li>Export division</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="person-card" style="margin-bottom: 25px; border-left-color: #764ba2;">
+                    <h4>🏭 Crossley Road Facility (UK)</h4>
+                    <div class="details">
+                        <p><strong>Specialty:</strong> Fabric manufacturing and engineering<br>
+                        <strong>Features:</strong></p>
+                        <ul style="margin-left: 20px; margin-top: 8px;">
+                            <li>Engineering design and tool room</li>
+                            <li>Fabric manufacturing</li>
+                            <li>Oeko-Tex Step certified (Award winner - Best Impact on Business Sustainability 2023)</li>
+                            <li>On-site digital printing facility</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <h3>International Offices</h3>
+                <div class="leadership-grid">
+                    <div class="person-card" style="border-left-color: #e74c3c;">
+                        <h4>🇨🇦 Canada</h4>
+                        <div class="details">
+                            <p><strong>Company:</strong> Louver-Lite (Canada) Limited<br>
+                            <strong>Address:</strong> 6015 Progress Street, Niagara Falls, Ontario, L2G 0C1, Canada<br>
+                            <strong>Location:</strong> St. Catharines/Niagara Falls, Ontario<br>
+                            <strong>Phone:</strong> +1 905 374 0123<br>
+                            <strong>Email:</strong> orderdesk@louvolitecanada.com<br>
+                            <strong>Website:</strong> www.louvolite.ca</p>
+                            
+                            <p style="margin-top: 10px;"><strong>Established:</strong> Early 1990s<br>
+                            <strong>Purpose:</strong> Wholesale distribution depot servicing North American market</p>
+                        </div>
+                    </div>
+
+                    <div class="person-card" style="border-left-color: #27ae60;">
+                        <h4>🇦🇺 Australia</h4>
+                        <div class="details">
+                            <p><strong>Company:</strong> Louvolite Australia<br>
+                            <strong>Address:</strong> 47-53 Power Street, St Mary's, Sydney, NSW 2760, Australia<br>
+                            <strong>Location:</strong> St Mary's, New South Wales<br>
+                            <strong>Phone:</strong> +61 (0)2 9673 9500<br>
+                            <strong>Email:</strong> sales@louvoliteaustralia.com<br>
+                            <strong>Website:</strong> www.louvolite.com.au</p>
+                            
+                            <p style="margin-top: 10px;"><strong>Established:</strong> 2002 (relocated from Singapore)<br>
+                            <strong>Previous Location:</strong> Singapore (1986-2002)<br>
+                            <strong>Purpose:</strong> Distribution depot servicing Australia, New Zealand, and South East Asia markets</p>
+                        </div>
+                    </div>
+
+                    <div class="person-card" style="border-left-color: #3498db;">
+                        <h4>🇳🇿 New Zealand</h4>
+                        <div class="details">
+                            <p><strong>Email:</strong> sales@louvolite.co.nz<br>
+                            <strong>Website:</strong> www.louvolite.co.nz</p>
+                            
+                            <p style="margin-top: 10px;"><strong>Note:</strong> Serviced from Australian office</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="background: #fff9e6; padding: 20px; border-radius: 8px; margin-top: 25px; border-left: 4px solid #ffc107;">
+                    <h4 style="margin-top: 0;">Historical International Presence</h4>
+                    <ul style="margin-left: 20px; line-height: 1.8;">
+                        <li><strong>Singapore (1986-2002):</strong> First international depot opened to service Australia and South East Asia</li>
+                        <li><strong>Holland:</strong> Depot opened as gateway into Continental Europe (historical reference)</li>
+                    </ul>
+                </div>
+
+                <div style="background: #f8f9fa; padding: 20px; border-radius: 8px; margin-top: 20px;">
+                    <h4 style="margin-top: 0;">Contact Departments (UK Headquarters)</h4>
+                    <ul style="margin-left: 20px; line-height: 1.8;">
+                        <li><strong>Customer Service/Orders:</strong> orders@louvolite.com | Phone: 0161 882 5050</li>
+                        <li><strong>Technical Support:</strong> tech.support@louvolite.com</li>
+                        <li><strong>Marketing:</strong> marketing@louvolite.com</li>
+                        <li><strong>Export Office:</strong> export.office@louvolite.com</li>
+                        <li><strong>Human Resources:</strong> human.resources@louvolite.com</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section id="leadership">
                 <h2>Board of Directors / Senior Leadership Team</h2>
                 <div class="leadership-grid">
                     <div class="person-card">
@@ -291,7 +633,7 @@
                 </div>
             </section>
 
-            <section>
+            <section id="secretary">
                 <h2>Company Secretary</h2>
                 <div class="secretary-info">
                     <h4>Kelly-Lee Whitehead</h4>
@@ -310,7 +652,7 @@
                 </div>
             </section>
 
-            <section>
+            <section id="team">
                 <h2>Extended Team Members</h2>
                 <p style="margin-bottom: 20px;">Featured in the company's "Meet the Team" section (as of January 2026):</p>
                 <div class="team-list">
@@ -361,7 +703,7 @@
                 </div>
             </section>
 
-            <section>
+            <section id="it">
                 <h2>Information Technology Department</h2>
                 <p>No individuals are explicitly listed in public sources as part of a dedicated Information Technology (IT) department. However:</p>
                 <div style="background: #f8f9fa; padding: 20px; border-radius: 8px; margin-top: 15px;">
@@ -370,7 +712,7 @@
                 </div>
             </section>
 
-            <section>
+            <section id="resignations">
                 <h2>Recent Changes/Resignations</h2>
                 <div class="resignation-list">
                     <p><strong>From Companies House Records:</strong></p>
@@ -392,5 +734,30 @@
             <p>Information compiled from Companies House records and public sources</p>
         </footer>
     </div>
+
+    <!-- Go to Top Button -->
+    <button class="go-to-top" onclick="scrollToTop()" id="goToTopBtn" aria-label="Go to top">
+        ↑
+    </button>
+
+    <script>
+        // Show/hide the go-to-top button based on scroll position
+        window.onscroll = function() {
+            const goToTopBtn = document.getElementById('goToTopBtn');
+            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+                goToTopBtn.classList.add('show');
+            } else {
+                goToTopBtn.classList.remove('show');
+            }
+        };
+
+        // Smooth scroll to top
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+    </script>
 </body>
 </html>
